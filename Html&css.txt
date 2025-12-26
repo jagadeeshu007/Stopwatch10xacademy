@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stopwatch</title>
+  <style>
+    body {
+      background: grey;
+      color:blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  
+    .stopwatch {
+      background:lightblue;
+      padding: 25px;
+      border-radius: 12px;
+      width: 300px;
+      text-align: center;
+    }
+  
+    .display {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      background:black;
+      padding: 10px;
+      border-radius: 8px;
+      letter-spacing: 2px;
+    }
+  
+    button {
+      margin: 5px;
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  
+    button:hover {
+      opacity: 0.85;
+    }
+  
+    .start { background: red; color:white; }
+    .pause { background: blue; color:white; }
+    .reset { background: green; color:white; }
+    .cast  { background: yellow; color:black; }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+      max-height: 120px;
+      overflow-y: auto;
+      text-align: left;
+    }
+  
+    ul li {
+      background:white;
+      padding: 6px 10px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stopwatch">
+    <div class="display" id="display">00:00:000</div>
+
+    <div>
+      <button class="start" onclick="start()">Start</button>
+      <button class="pause" onclick="pause()">Pause</button>
+      <button class="reset" onclick="reset()">Reset</button>
+      <button class="cast" onclick="castTime()">Cast Time</button>
+    </div>
+
+    <ul id="castList"></ul>
+  </div>
+
+  <script src="javaScript.js">
+  </script>
+
+</body>
+</html>
